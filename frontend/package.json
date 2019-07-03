@@ -46,7 +46,8 @@
     "redux-thunk": "^2.2.0",
     "reselect": "^4.0.0",
     "string-similarity": "^3.0.0",
-    "tus-js-client": "^1.6.0"
+    "tus-js-client": "^1.6.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "antd-scss-theme-plugin": "^1.0.6",
@@ -119,7 +120,9 @@
     "test": "jest --env=jsdom --runInBand",
     "test:coverage": "npm test src -- --testResultsProcessor=jest-junit",
     "test:updateAll": "npm test -- -u",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "jest": {
     "verbose": true,
@@ -178,5 +181,6 @@
         "jest --env=jsdom --runInBand --findRelatedTests"
       ]
     }
-  }
+  },
+  "snyk": true
 }
